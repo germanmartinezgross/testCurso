@@ -1,0 +1,43 @@
+<mvc:View controllerName="project1.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:m="sap.m" xmlns:t="sap.ui.table">
+    <m:Page id="page" title="{i18n>title}">
+        <m:content>
+            <m:Panel expandable="true" headerText="oData">
+                <t:Table id="oDataTable" rows="{path:'/Employees'}" xmlns="sap.ui.table">
+                    <t:columns>
+                        <t:Column sortProperty="EmployeeID">
+                            <m:Label text="ID" />
+                            <t:template>
+                                <m:Text text="{EmployeeID}" />
+                            </t:template>
+                        </t:Column>
+                        <t:Column sortProperty="FirstName">
+                            <m:Label text="First Name" />
+                            <t:template>
+                                <m:Text text="{FirstName}" />
+                            </t:template>
+                        </t:Column>
+                        <t:Column sortProperty="LastName">
+                            <m:Label text="Last Name" />
+                            <t:template>
+                                <m:Text text="{LastName}" />
+                            </t:template>
+                        </t:Column>
+                        <t:Column sortProperty="Title">
+                            <m:Label text="Title" />
+                            <t:template>
+                                <m:Text text="{Title}" />
+                            </t:template>
+                        </t:Column>
+                        <t:Column sortProperty="Notes">
+                            <m:Label text="Notes" />
+                            <t:template>
+                                <m:Text text="{Notes}" />
+                            </t:template>
+                        </t:Column>
+                    </t:columns>
+                        <t:rows></t:rows>
+                </t:Table>
+            </m:Panel>
+        </m:content>
+    </m:Page>
+</mvc:View>
